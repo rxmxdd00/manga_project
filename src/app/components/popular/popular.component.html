@@ -1,0 +1,62 @@
+<div class="grid grid-col-10 gap-4 pb-4">
+    <div class="flex justify-between bg-black">
+        <button class="text-white font-medium p-2 w-[30%] h-full bg-[#914ae8] hover:bg-[#914ae8]">
+          Weekly
+        </button>
+        <button class="text-white font-medium p-2 w-[30%] h-full hover:bg-[#914ae8]">
+          Monthly
+        </button>
+        <button class="text-white font-medium p-2 w-[30%] h-full hover:bg-[#914ae8]">
+          All
+        </button>
+      </div>
+
+    <!-- <div *ngFor="let content of IContent">
+      <mat-card class="example-card text-white" style="background-color: #1e1c21;">
+          <mat-card-header>
+          <mat-card-title-group>
+              <mat-card-title>{{content.title}}</mat-card-title>
+              <mat-card-subtitle class="text-[#7a7a77]">{{content.genre}}</mat-card-subtitle>
+              <img mat-card-sm-image src="{{content.img_link}}" >
+          </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+          </mat-card-content>
+        </mat-card> 
+    </div> -->
+
+    <div *ngFor="let content of IContent">
+      <div class="grid grid-cols-4 gap-4">
+        <div class="flex justify-center h-[30px] w-[30px] border-2 border-[#494d4a] text-[#494d4a]">
+          <div class="">
+            <span>
+              {{content.id}}
+            </span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <div>
+            <span class="text-white font-medium">
+              {{content.title}}
+            </span>
+          </div>
+          <div>
+            <span class="text-[#494d4a]">
+              Genre : 
+            </span>
+            <span class="text-white">
+              {{content.genre}}
+            </span>
+          </div>
+          <div>
+            <span class="text-[#fcb100]">
+              {{content.ratings}}
+            </span>
+          </div>
+        </div>
+        <div>
+          <img class="h-[90px] w-[70px]" src="{{content.img_link}}" >
+        </div>
+      </div>
+    </div>
+</div>

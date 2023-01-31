@@ -1,0 +1,19 @@
+<div class="grid grid-cols-2 gap-4 ">
+    <div *ngFor="let content of IContent.slice(0,6)" class="h-full w-full">
+        <div class="flex">
+            <img class="h-[156px]" src="{{content.img_link}}" >
+            <div class="p-4 flex flex-col space-y-2">
+                <div class="text-white font-medium text-[14px]">
+                    <span>
+                        {{content.title}}
+                    </span>
+                </div>
+                <div class="text-[#7a7a77] font-medium text-[14px] w-[40%]">
+                    <span *ngFor="let chapter of content.chapters">
+                        {{chapter}} 
+                    </span>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div *ngIf="images && images.length > 0" class="carousel-container">
+  <div class="carousel" *ngFor="let image of images.slice(0,5); let i = index" [ngClass]="{'image-active' : selectedIndex === i}">
+    <div class="relative">
+      <img class=" w-full h-[300px] " [src]="image.img_link" style="object-fit:cover; ">
+      
+      <div>
+        <div class="absolute top-0 h-full w-full bg-black opacity-75 ">
+          <!--  -->
+        </div> 
+        <div class="absolute top-0 h-full grid grid-cols-3 gap-4 space-y-4 p-4 align-center h-full">
+          <div class="col-span-2 p-4">
+            <div class="flex">
+               <div class="flex justify-center h-[30px] w-[30px] border-2 border-[#494d4a] text-[#494d4a]">
+                  <span>{{image.id}}</span>
+               </div>
+               <div class="pl-4">
+                  <span class="text-white font-medium text-[24px]">
+                    {{image.title}}
+                  </span>
+                  <div>
+                    <span class="text-[#fcb100]">
+                      Genre : 
+                    </span>
+                    <span class="text-white">
+                      {{image.genre}}
+                    </span>
+                 </div>
+               </div>
+            </div>
+            <div class="pt-4">
+              <span class="text-[#fcb100]">
+                Synopsis : 
+              </span>
+              <span class="text-white">
+                {{image.summary}}
+              </span>
+              <div class="pt-2">
+                <div>
+                  <span class="text-[#fcb100]">
+                    Status : 
+                  </span>
+                  <span class="text-white">
+                    {{image.status}}
+                  </span>
+                </div>
+                <div>
+                  <span class="text-[#fcb100]">
+                    Author : 
+                  </span>
+                  <span class="text-white">
+                    {{image.author}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img class="h-[230px] w-[180px]"   [src]="image.img_link"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="indicators" class="carousel-dot-container">
+    <span *ngFor="let dot of images.slice(0,5); let i=index" 
+    class="dot" [ngClass]="{'active' : selectedIndex === i}"
+    (click)="selectedImage(i)"></span>
+  </div>
+</div>
