@@ -1,0 +1,43 @@
+
+  
+    <div class="grid grid-cols-3 p-20 gap-4 max-h-full">
+      <div class="col-span-2">
+        <div *ngIf="!isFiltered" class="flex flex-col space-y-4">
+         <div class="h-[30%]">
+            <app-carousel></app-carousel>
+         </div>
+          
+          <div class="h-[35%] p-4" style="background-color:#1f1e21;"> 
+            <div class="pb-4 text-white font-medium text-[14px]">
+              <span>
+                Popular Today
+              </span>
+            </div>
+            <app-card-gallery></app-card-gallery>
+          </div>
+          <div class="h-full p-4" style="background-color:#1f1e21;">
+            <div class="pb-4 text-white font-medium text-[14px]">
+              <span>
+                Latest Update
+              </span>
+            </div>
+            <app-latest-update></app-latest-update>
+          </div>
+        </div>
+        <div class='h-[30%] w-[70%]' *ngIf="isFiltered">
+          <span class="text-white font-medium"> RESULT LIST</span>
+        </div>
+      </div>
+      <div class='bg-[#1f1e21] pl-8 pr-8 - pt-4 rounded-lg'>
+        <div class="pb-4">
+          <div class="mb-4">
+            <span class="text-white font-medium text-[16px]">
+              Popular List
+            </span>
+            <hr>
+          </div>        
+        </div>
+        <app-popular></app-popular>
+      </div>
+    </div>
+  

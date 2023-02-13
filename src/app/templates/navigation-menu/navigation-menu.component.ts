@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation-menu.component.css']
 })
 export class NavigationMenuComponent {
+  isSetSettings= false;
 
+  isClick(){
+    this.isSetSettings != this.isSetSettings
+  }
 }

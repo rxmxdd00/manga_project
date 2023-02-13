@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
+  
 }

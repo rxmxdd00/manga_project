@@ -14,6 +14,15 @@ import { PopularComponent } from './components/popular/popular.component';
 import { CardGalleryComponent } from './templates/card-gallery/card-gallery.component';
 import { LatestUpdateComponent } from './components/latest-update/latest-update.component';
 import { CarouselModule } from './components/carousel/carousel.module';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environment/environment';
+import { AuthService } from './shared/services/auth.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +31,9 @@ import { CarouselModule } from './components/carousel/carousel.module';
     HomePageComponent,
     PopularComponent,
     CardGalleryComponent,
-    LatestUpdateComponent
+    LatestUpdateComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +42,14 @@ import { CarouselModule } from './components/carousel/carousel.module';
     MatIconModule,
     MatSlideToggleModule,
     MatCardModule,
-    CarouselModule
+    CarouselModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

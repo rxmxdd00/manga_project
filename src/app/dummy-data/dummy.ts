@@ -76,7 +76,7 @@ export const IDummyContent = [
         "title" : "Standard Reincarnation",
         "type" : "MANHWA",
         "genre" : "Action, Fantasy, Adventure, Martial Arts",
-        "summary" : "The greatest martial family, Samion. Daven, a member of the Samion family, is a one-armed martial soldier without a right arm. Despite the ridicule and contempt he got for only having a left arm, he surpassed the direct line of the Samion family like a genius. However, he got betrayed by his family and parents in the end, thus meeting a poor end. But, he was reincarnated. “I have a right arm?” He had a new family tradition. A naturally gifted body. Experience from his past life. And the god Yulion with him as well. After his reincarnation, everything changed, and a new adventure started.",
+        "summary" : "The greatest martial family, Samion. Daven, a member of the Samion family, is a one-armed martial soldier without a right arm. Despite the ridicule and contempt he got for only having a left arm, he surpassed the direct line of the Samion family like a genius. However, he got betrayed by his family and parents in the end, thus meeting a poor end. But, he was reincarnated.",
         "status" : "Ongoing",
         "author" : "Kim Pyeongbeom",
         "img_link" : "https://www.asurascans.com/wp-content/uploads/2022/08/standardofReCover03.png",

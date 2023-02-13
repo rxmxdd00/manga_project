@@ -6,9 +6,6 @@ import {Sample} from './dummy-data/sample';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'manga_project';
+  title = 'Manga';
 
-  isFiltered = false;
-
-  IContent : Sample[] = [];
 }

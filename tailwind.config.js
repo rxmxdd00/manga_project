@@ -23,7 +23,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        
+        'manga-bg' : "url('assets/img/Manga/manga-bg.jpg')"
       }
     },
   },
